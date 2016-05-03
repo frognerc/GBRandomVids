@@ -1,23 +1,10 @@
-
-
-
-$("#beginButton").click(function(){
-	$("#welcome_page").fadeOut("slow", showHomePage);
-})
-
-function showHomePage(){
-	$("#header").slideDown("slow");
-	$("#footer").slideDown("slow");
-	$("#content").fadeIn("slow");
-}
-
 //document.write('<iframe data-cbsi-video width="1280" height="720" id="currVideo" src="http://www.giantbomb.com/videos/embed/11137/" frameborder="0" allowfullscreen></iframe>');
 function pickRandomQuickLook(){
 	var indexNum = Math.floor((Math.random() * 2169));
 	document.getElementById("currVideo").src='http://www.giantbomb.com/videos/embed/' + quickLooks[indexNum].split(',')[0] + '/';
 	document.getElementById("VideoLink").innerHTML=quickLooks[indexNum].split(',')[1];
-	setTimeout(pickRandomQuickLook, parseInt(quickLooks[indexNum].split(',')[1]) * 1000);
-	setTimeout(pickRandomQuickLook, parseInt("10000"));
+	//setTimeout(pickRandomQuickLook, parseInt(quickLooks[indexNum].split(',')[1]) * 1000);
+	//setTimeout(pickRandomQuickLook, parseInt("10000"));
 }
 
 function testButton(){

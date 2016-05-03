@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="css/main.css">	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="http://static.giantbomb.com/js/compiled/public/videoEmbedApi.js" type="text/javascript"></script>
   </head>
   <body>
 		<header>
@@ -39,7 +40,6 @@
 			</footer>
 		</div>
   </body>
-  <script src="http://static.giantbomb.com/js/compiled/public/videoEmbedApi.js" type="text/javascript"></script>
   <script src="app.js" type="text/javascript" charset="utf-8"></script>
   <script src="videoApiControll.js" type="text/javascript" charset="utf-8"></script>
 </html>

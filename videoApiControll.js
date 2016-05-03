@@ -1,8 +1,13 @@
+var gVideoId = 0;
+var gApi = 0;
+var timer = 0;
+var stop_timer = 0;
+
 $(document).ready(
 
 	function ()
 	{
-		//
+	
 		$('iframe[data-cbsi-video]').each(
 
 			function(i,e)
@@ -23,6 +28,14 @@ $(document).ready(
 									gVideoId = result[0].id;
 									gApi = $.data(document.getElementById('currVideo'), 'cbsi-embed-api');
 								}
+								
+								stop_timer = 1;
+								timer = 0;
+								$('#timestamp').text(timer);
+								startTimer();
+								seekVideo(timer / 1000);
+								playVideo();
+								
 							},
 
 							function(error)
@@ -36,6 +49,17 @@ $(document).ready(
 		);
 	}
 );
+
+function startTimer(){
+	
+	do{
+		stop_timer = 0;
+		timer += 1000;
+		$('#timestamp').text(timer / 1000);
+		setTimeout(startTimer,1000);
+	}while(stop_timer == 0);
+	stop_timer = 0;
+}
 
 function playVideo()
 {
@@ -82,9 +106,9 @@ function resumeVideo()
 	);
 }
 
-function seekVideo()
+function seekVideo(timeStamp)
 {
-	gApi.setCurrentTimeStamp(gVideoId, 60,
+	gApi.setCurrentTimeStamp(gVideoId, timeStamp,
 
 		function()
 		{
