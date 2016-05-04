@@ -29,11 +29,11 @@ $(document).ready(
 									gApi = $.data(document.getElementById('currVideo'), 'cbsi-embed-api');
 								}
 								
-								stop_timer = 1;
+								//stop_timer = 1;
 								timer = 0;
-								$('#timestamp').text(timer);
+								//$('#timestamp').text(timer);
 								startTimer();
-								seekVideo(timer / 1000);
+								//seekVideo(timer / 1000);
 								playVideo();
 								
 							},
@@ -51,14 +51,11 @@ $(document).ready(
 );
 
 function startTimer(){
-	
-	do{
-		stop_timer = 0;
+	if(stop_timer == 0){
 		timer += 1000;
 		$('#timestamp').text(timer / 1000);
 		setTimeout(startTimer,1000);
-	}while(stop_timer == 0);
-	stop_timer = 0;
+	}
 }
 
 function playVideo()
