@@ -23,16 +23,10 @@
 				<input type='button' value='Play' onClick='playVideo();'/>
 				<input type='button' value='Pause' onClick='pauseVideo();'/>
 				<input type='button' value='Resume' onClick='resumeVideo();'/>
-				<input type='button' value='Jump 1 minute in' onClick='seekVideo();'/>
-				<input type='button' value='Alert when finished' onClick='alertWhenFinished();'/>
-
-				<br/><br/>
-				<input type='button' value='Get Timestamp' onClick='getTimestamp();'/>
-				Current Timestamp: <span id='timestamp'>0</span>
-				
 				<button id="ChangeVideo">Change Video</button>
-				<iframe data-cbsi-video width="1280" height="720" id="currVideo" src="http://www.giantbomb.com/videos/embed/11137/" frameborder="0" allowfullscreen></iframe>
-				<p id="VideoLink"></p>
+				<br/><br/>
+				<iframe data-cbsi-video width="960" height="576" id="currVideo" src="http://www.giantbomb.com/videos/embed/11137/" frameborder="0" allowfullscreen></iframe>
+				<p id="VideoTitle">Quicklook</p>
 				</div>
 			</section>
 			<footer>
@@ -40,6 +34,6 @@
 			</footer>
 		</div>
   </body>
-  <script src="app.js" type="text/javascript" charset="utf-8"></script>
+  <<script src="app.js" type="text/javascript" charset="utf-8"></script>
   <script src="videoApiControll.js" type="text/javascript" charset="utf-8"></script>
 </html>

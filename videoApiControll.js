@@ -1,7 +1,7 @@
 var gVideoId = 0;
 var gApi = 0;
 var timer = 0;
-var stop_timer = 0;
+var intervalID = 0;
 
 $(document).ready(
 
@@ -29,12 +29,10 @@ $(document).ready(
 									gApi = $.data(document.getElementById('currVideo'), 'cbsi-embed-api');
 								}
 								
-								//stop_timer = 1;
-								timer = 0;
-								//$('#timestamp').text(timer);
-								startTimer();
-								//seekVideo(timer / 1000);
-								playVideo();
+								console.log(quickLooks[currentVideoIndex].split(',')[1]);
+								setTimeout('seekVideo(1)', 1000)
+								setTimeout(playVideo, 2000)
+								setTimeout(alertWhenFinished, 10000);
 								
 							},
 
@@ -50,13 +48,12 @@ $(document).ready(
 	}
 );
 
+/*
 function startTimer(){
-	if(stop_timer == 0){
-		timer += 1000;
-		$('#timestamp').text(timer / 1000);
-		setTimeout(startTimer,1000);
-	}
+	timer += 1000;
+	$('#timestamp').text(timer / 1000);
 }
+*/
 
 function playVideo()
 {
@@ -141,7 +138,7 @@ function alertWhenFinished()
 
 		function()
 		{
-			alert('its over!');
+			pickRandomQuickLook();
 		},
 
 		function(error)
