@@ -29,7 +29,7 @@ $(document).ready(
 									gApi = $.data(document.getElementById('currVideo'), 'cbsi-embed-api');
 								}
 								
-								console.log(quickLooks[currentVideoIndex].split(',')[1]);
+								//console.log(quickLooks[currentVideoIndex].split(',')[1]);
 								setTimeout('seekVideo(1)', 1000)
 								setTimeout(playVideo, 2000)
 								setTimeout(alertWhenFinished, 10000);

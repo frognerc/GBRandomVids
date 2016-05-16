@@ -1,6 +1,6 @@
 var currentVideoIndex = 0;
 
-//document.write('<iframe data-cbsi-video width="1280" height="720" id="currVideo" src="http://www.giantbomb.com/videos/embed/11137/" frameborder="0" allowfullscreen></iframe>');
+var pauseOrResume = 1;
 
 $(document).ready(pickRandomQuickLook);
 
@@ -10,12 +10,33 @@ function pickRandomQuickLook(){
 	document.getElementById("VideoTitle").innerHTML=quickLooks[currentVideoIndex].split(',')[1];
 }
 
-function testButton(){
-	document.getElementById("ChangeVideo").innerHTML='Look what I changed';
-}
+$("#resumePause").mousedown(function(){
+	if(pauseOrResume == 0){
+		pauseOrResume = 1;
+		$("#resumePause").attr("src", "play_1.png");
+	}else{
+		pauseOrResume = 0;
+		$("#resumePause").attr("src", "Buttons_3.png");
+	}
+});
 
-$('#ChangeVideo').click(pickRandomQuickLook);
+$("#resumePause").mouseup(function(){
+	if(pauseOrResume == 0){
+		$("#resumePause").attr("src", "play_0.png");
+		$("#resumePause").attr("onClick", "pauseVideo();");
+	}else{
+		$("#resumePause").attr("src", "Buttons_0.png");
+		$("#resumePause").attr("onClick", "resumeVideo();");
+	}
+});
 
+$("#change").mousedown(function(){
+		$("#change").attr("src", "ChangeBDown.png");
+});
+
+$("#change").mouseup(function(){
+		$("#change").attr("src", "Buttons_1.png");
+});
 
 var quickLooks = [
 "11178,Quick Look: March of the Living",
