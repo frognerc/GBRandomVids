@@ -6,6 +6,15 @@ HEADER
 	padding: 20px 0 20px 0;
 }
 
+h1 {
+	font-family: 'Changa One', sans-serif;	
+	margin: 15px 0;
+	font-size: 1.75em;
+	font-weight: normal;
+	line-height: 0.8em;
+	color: #ffffff;
+}
+
 #header{
 	text-decoration: none; 
 	letter-spacing: 3px;
@@ -42,15 +51,14 @@ HEADER
 #currVideo{
 	box-shadow: 10px 10px 25px 5px #000000;
 }
-/************************************
-GENERAL
-*************************************/
+
 * a {
   text-decoration: none; 
 }
 
 body {
 	height: 100%;
+	font-family: 'Open Sans', sans-serif;
 }
 
 html,

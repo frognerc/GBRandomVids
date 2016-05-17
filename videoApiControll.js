@@ -1,6 +1,5 @@
 var gVideoId = 0;
 var gApi = 0;
-var timer = 0;
 var intervalID = 0;
 
 $(document).ready(
@@ -32,6 +31,7 @@ $(document).ready(
 								//console.log(quickLooks[currentVideoIndex].split(',')[1]);
 								setTimeout('seekVideo(1)', 1000)
 								setTimeout(playVideo, 2000)
+								setTimeout(resumeVideo, 4000)
 								setTimeout(alertWhenFinished, 10000);
 								
 							},
@@ -47,13 +47,6 @@ $(document).ready(
 		);
 	}
 );
-
-/*
-function startTimer(){
-	timer += 1000;
-	$('#timestamp').text(timer / 1000);
-}
-*/
 
 function playVideo()
 {

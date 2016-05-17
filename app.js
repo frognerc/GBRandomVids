@@ -1,15 +1,20 @@
-var currentVideoIndex = 0;
-
+// 1 = pause button, 0 = play button
 var pauseOrResume = 1;
 
+var currentVideoIndex = 0;
+
+// Serve up a video when page loads
 $(document).ready(pickRandomQuickLook);
 
+// Gets random video id and name from video array
 function pickRandomQuickLook(){
 	currentVideoIndex = Math.floor((Math.random() * 2169));
 	document.getElementById("currVideo").src='http://www.giantbomb.com/videos/embed/' + quickLooks[currentVideoIndex].split(',')[0] + '/';
 	document.getElementById("VideoTitle").innerHTML=quickLooks[currentVideoIndex].split(',')[1];
 }
 
+
+// pause,resume button animation
 $("#resumePause").mousedown(function(){
 	if(pauseOrResume == 0){
 		pauseOrResume = 1;
@@ -20,6 +25,7 @@ $("#resumePause").mousedown(function(){
 	}
 });
 
+// pause,resume button animation
 $("#resumePause").mouseup(function(){
 	if(pauseOrResume == 0){
 		$("#resumePause").attr("src", "play_0.png");
@@ -30,14 +36,17 @@ $("#resumePause").mouseup(function(){
 	}
 });
 
+// Next video button animation
 $("#change").mousedown(function(){
 		$("#change").attr("src", "ChangeBDown.png");
 });
 
+// Next video button animation
 $("#change").mouseup(function(){
 		$("#change").attr("src", "Buttons_1.png");
 });
 
+//Array of quicklook ID and names. Was copied and pasted from an API query request
 var quickLooks = [
 "11178,Quick Look: March of the Living",
 "11177,Quick Look: Pocket Card Jockey",
