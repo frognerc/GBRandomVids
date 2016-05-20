@@ -1,6 +1,9 @@
 var gVideoId = 0;
 var gApi = 0;
-var intervalID = 0;
+var timeoutPlay = 0;
+var timeoutSeek = 0;
+var timeoutResume = 0;
+var timeoutFinish = 0;
 
 $(document).ready(
 
@@ -28,11 +31,7 @@ $(document).ready(
 									gApi = $.data(document.getElementById('currVideo'), 'cbsi-embed-api');
 								}
 								
-								//console.log(quickLooks[currentVideoIndex].split(',')[1]);
-								setTimeout('seekVideo(1)', 1000)
-								setTimeout(playVideo, 2000)
-								setTimeout(resumeVideo, 4000)
-								setTimeout(alertWhenFinished, 10000);
+								setVideoForPlay();
 								
 							},
 
@@ -47,6 +46,13 @@ $(document).ready(
 		);
 	}
 );
+
+function setVideoForPlay(){
+	timeoutPlay = setTimeout('seekVideo(1)', 1000)
+	timeoutSeek = setTimeout(playVideo, 2000)
+	timeoutResume = setTimeout(resumeVideo, 4000)
+	timeoutFinish = setTimeout(alertWhenFinished, 10000);
+}
 
 function playVideo()
 {

@@ -7,7 +7,7 @@ HEADER
 }
 
 h1 {
-	font-family: 'Changa One', sans-serif;	
+	font-family: 'Changa One', sans-serif;
 	margin: 15px 0;
 	font-size: 1.75em;
 	font-weight: normal;
@@ -31,8 +31,6 @@ h1 {
 	background: -webkit-linear-gradient(top,  #141414 0%,#333333 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom,  #141414 0%,#333333 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#141414', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
-
-
 }
 
 #top_bar{
@@ -53,7 +51,12 @@ h1 {
 }
 
 * a {
-  text-decoration: none; 
+	text-decoration: none;
+	color: #cc0000;
+}
+
+a:visited {
+	color: #cc0000;
 }
 
 body {
@@ -81,9 +84,19 @@ section {
 	outline: none;
 }
 
+#GBLink {
+	padding: 0 18px 12px 0;	
+	border: none;
+	outline: none;
+}
+
 #resumePause {
-	padding: 0 0 0 150px;
+	padding: 0 0 0 0;
 	border: none;
 	outline:none;
 	
+}
+
+#NOTE {
+	color: #ffffff;
 }
