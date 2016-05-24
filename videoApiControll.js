@@ -1,3 +1,5 @@
+//Modified file from Giant Bomb API example
+
 var gVideoId = 0;
 var gApi = 0;
 var timeoutPlay = 0;
@@ -14,13 +16,15 @@ $(document).ready(
 
 			function(i,e)
 			{
+				console.log(i);
+				console.log(e);
 				e.addEventListener('load',
 
 					function()
 					{
 						var api = new CBSiVideoEmbedApi();
 						$.data(this, 'cbsi-embed-api', api);
-
+						
 						api.init(this,
 
 							function(result)
@@ -113,23 +117,6 @@ function seekVideo(timeStamp)
 		}
 	);
 }
-
-function getTimestamp()
-{
-	gApi.getCurrentTimeStamp(gVideoId,
-
-		function(timeStamp)
-		{
-			$('#timestamp').text(timeStamp); // yah yah, selector reuse. this is a crappy sample, edgework sucks...
-		},
-
-		function(error)
-		{
-			alert('Ooops! ' + error);
-		}
-	);
-}
-
 
 function alertWhenFinished()
 {
