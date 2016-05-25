@@ -16,8 +16,6 @@ $(document).ready(
 
 			function(i,e)
 			{
-				console.log(i);
-				console.log(e);
 				e.addEventListener('load',
 
 					function()

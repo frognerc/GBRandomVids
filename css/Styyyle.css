@@ -100,3 +100,35 @@ section {
 #NOTE {
 	color: #ffffff;
 }
+
+
+@media (max-width: 950px) { 
+	#currVideo{
+		width: 90%;
+		height: 50%;
+	}
+}
+
+@media (max-width: 500px) { 
+	#currVideo{
+		height: 30%;
+	}
+	
+	#header h1{
+		font-size: 30px;
+	}
+	
+	#VideoTitle{
+		font-size: 25px;
+	}
+	#change {
+		width: 25%;
+	}
+	#GBLink {
+		width: 25%;
+	}
+
+	#resumePause {
+		width: 35%;
+	}
+}

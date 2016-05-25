@@ -10,6 +10,7 @@ var timeoutSeek = 0;
 var timeoutResume = 0;
 var timeoutFinish = 0;
 
+
 // Serve up a video when page loads
 $(document).ready(pickRandomQuickLook);
 
@@ -84,7 +85,7 @@ $("#change").mousedown(function(){
 
 // Next video button animation
 $("#change").mouseup(function(){
-		$("#change").attr("src", "Buttons_1.png");
+		$("#change").attr("src", "ChangeBUp.png");
 });
 
 $("#GBLink").mousedown(function(){
